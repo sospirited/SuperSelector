@@ -1,0 +1,172 @@
+.superselect {
+	height:120px;
+	width:600px;
+	z-index:99999;
+	background-color: rgba(0,0,0,0.75);
+	position:absolute;
+	border-radius:3px;
+	border:black 1px solid;
+	opacity: 1;
+  
+}
+
+#superselect_tabs {
+	height:24px;
+	padding-left: 3px;
+	margin-top: 3px;
+}
+
+#superselect_tabs > ul{
+	font: 0.9em;
+	list-style:none;
+}
+
+#superselect_tabs > ul > li{
+	margin:0 2px 0 0;
+	padding:2px 10px;
+	display:block;
+	float:left;
+	color:#FFF;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+	-moz-border-radius-topleft: 4px;
+	-moz-border-radius-topright: 4px;
+	-moz-border-radius-bottomright: 0px;
+	-moz-border-radius-bottomleft: 0px;
+	border-top-left-radius:4px;
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 0px;
+	border-bottom-left-radius: 0px; 
+	background: #C9C9C9; /* old browsers */
+	background: -moz-linear-gradient(top, #0C91EC 0%, #257AB6 100%); /* firefox */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#0C91EC), color-stop(100%,#257AB6)); /* webkit */
+}
+
+#superselect_tabs > ul > li:hover{
+	background: #FFFFFF; /* old browsers */
+	background: -moz-linear-gradient(top, #FFFFFF 0%, #F3F3F3 10%, #F3F3F3 50%, #FFFFFF 100%); /* firefox */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#FFFFFF), color-stop(10%,#F3F3F3), color-stop(50%,#F3F3F3), color-stop(100%,#FFFFFF)); /* webkit */
+	cursor:pointer;
+	color: #333;
+}
+
+#superselect_tabs > ul > li.superselect_activetab{
+	background: #FFFFFF; /* old browsers */
+	background-color: rgba(0,0,0,0.75);
+	cursor:pointer;
+	color: white;
+}
+
+.superselect_hidden {
+	display:none;
+}
+
+#superselect_generated {
+	color:white;
+	background-color:black;
+	font-family:Courier;
+	font-size:0.8em;
+	margin-left:3px;
+	margin-right:3px;
+	height:60px;
+	padding-left: 5px;
+	padding-top: 5px; 
+	padding-left:5px;
+	padding-bottom:5px;
+	border-top-right-radius:3px;
+}
+
+.superselect_genoptions {
+	color:white;
+	background-color:#257AB6;
+	font-family:Courier;
+	font-size:0.8em;
+	margin-left:3px;
+	margin-right:3px;
+	height:18px;
+	padding-left: 5px;
+	padding-left:5px;
+	border: 1px black solid;
+	border-bottom-left-radius:3px;
+	border-bottom-right-radius:3px;
+}
+
+.superselect_genoptions input {
+	vertical-align:middle;
+}
+
+.superselect_genoptions span {
+	vertical-align:middle;
+}
+
+.config_area {
+	width:578px;
+	resize:both;
+	height:52px;
+	margin-top: 5px;
+}
+
+#superselect_config1 {
+	color:white;
+	background-color:black;
+	font-family:Courier;
+	font-size:0.8em;
+	margin-left:3px;
+	margin-right:3px;
+	height:80px;
+	padding-left: 5px;
+	padding-top: 5px; 
+	padding-left:5px;
+	padding-bottom:5px;
+	border-top-right-radius:3px;
+	border-bottom-left-radius:3px;
+	border-bottom-right-radius:3px;
+}
+
+#superselect_config2 {
+	color:white;
+	background-color:black;
+	font-family:Courier;
+	font-size:0.8em;
+	margin-left:3px;
+	margin-right:3px;
+	height:80px;
+	padding-left: 5px;
+	padding-top: 5px; 
+	padding-left:5px;
+	padding-bottom:5px;
+	border-top-right-radius:3px;
+	border-bottom-left-radius:3px;
+	border-bottom-right-radius:3px;
+}
+
+.superselect_dockright {
+	right:5px;
+	bottom:5px;
+}
+
+.superselect_dockleft {
+	left:5px;
+	bottom:5px;
+}
+
+.superselect_lefticon {
+	color:grey;
+	width:16px;
+	height:16px;
+	background-image:url('img/dock_left.png');
+	background-repeat: no-repeat;
+	position: absolute;
+	margin-right:584px;
+}
+
+.superselect_righticon {
+	color:grey;
+	width:16px;
+	height:16px;
+	background-image:url('img/dock_right.png');
+	background-repeat: no-repeat;
+	position:absolute;
+	margin-left:584px;
+}
