@@ -199,16 +199,18 @@ superselector.Target.prototype.calculateTagSelector = function()
 	var sTagName = this.currentElement.tagName;
 	var eParent = this.currentElement.parentElement;
 	var pChildElementsToConsider = (eParent == null ? [] : eParent.children);
+	var pTagElementsToConsider = (eParent == null ? [] : eParent.getElementsByTagName(sTagName));
 	
 	if(sTagName.toLowerCase() == "body")
 	{
 		this.selectors.push(sTagName.toLowerCase());
 	}
 
-	else if(pChildElementsToConsider.length == 1)
+	else if(pTagElementsToConsider.length == 1)
 	{
 		this.selectors.push(sTagName.toLowerCase());
 	}
+
 	else
 	{
 		for (var i = 0; i < pChildElementsToConsider.length; i++)
