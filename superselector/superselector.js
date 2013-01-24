@@ -115,7 +115,7 @@ superselector.Target = function(eElement, oConfig)
 
 superselector.Target.prototype.calculateSelector = function()
 {
-	var prefix = '$("';
+	var prefix = '$$("';
 	var suffix = '");';
 	
 	this.traverseAndCalc(this.targetElement);
@@ -198,19 +198,24 @@ superselector.Target.prototype.calculateTagSelector = function()
 {
 	var sTagName = this.currentElement.tagName;
 	var eParent = this.currentElement.parentElement;
-	var pElementsToConsider = eParent.getElementsByTagName(sTagName);
+	var pChildElementsToConsider = (eParent == null ? [] : eParent.children);
 	
-	if(pElementsToConsider.length == 1)
+	if(sTagName.toLowerCase() == "body")
 	{
-		this.selectors.push(sTagName);
+		this.selectors.push(sTagName.toLowerCase());
+	}
+
+	else if(pChildElementsToConsider.length == 1)
+	{
+		this.selectors.push(sTagName.toLowerCase());
 	}
 	else
 	{
-		for (var i = 0; i < pElementsToConsider.length; i++)
+		for (var i = 0; i < pChildElementsToConsider.length; i++)
 		{
-			if (pElementsToConsider[i] == this.currentElement)
+			if (pChildElementsToConsider[i] == this.currentElement)
 			{
-				this.selectors.push(sTagName.toLowerCase() + ":eq(" + i + ")");
+				this.selectors.push(sTagName.toLowerCase() + ":nth-child(" + (i+1) + ")");
 			}
 		}
 	}
