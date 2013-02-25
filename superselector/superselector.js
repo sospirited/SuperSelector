@@ -1,5 +1,5 @@
 (function() {
-	var superselector = function()
+	superselector = function()
 	{
 		if (!document.getElementById("superselect"))
 		{
