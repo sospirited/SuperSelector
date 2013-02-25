@@ -144,11 +144,13 @@
 .superselect_dockright {
 	right:5px;
 	bottom:5px;
+	position:fixed;
 }
 
 .superselect_dockleft {
 	left:5px;
 	bottom:5px;
+	position:fixed;
 }
 
 .superselect_lefticon {

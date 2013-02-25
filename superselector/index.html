@@ -1,22 +1,55 @@
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<style>
+		.notloaded {
+			background: #aaa;
+			color: #333;
+		}
+	</style>
 </head>
-
 <body>
 	<div class="clickContent">
+		<h1>SuperSelector</h1>
 		<p>
-			Try Ctrl + Clicking on these buttons!
+			The SuperSelector is awesome.
 		</p>
-		<button class="buttonWithClass">Button with Class only</button>
-		<br>
-		<button id="buttonWithId">Button with an ID only</button>
-		<br>
+		<p>
+			<strong>Use SuperSelector as a bookmarklet!</strong>
+			<br>
+			Wait for the following link to load, then drag it to your bookmark bar.
+			<a id='bookmarklet' class='notloaded'>SuperSelector</a>
+		<p>
+			
+			Try Ctrl + Clicking on these elements!
+		</p>
+		<div class="boxes">
+			<div class="red" style="height:100px; width:100px; background:red; float:left; margin:3px;">
+				<button>button</button>
+			</div>
+			<div class="blue" style="height:100px; width:100px; background:blue; float:left; margin:3px">
+				<button>button</button>
+			</div>
+			<div class="yellow" style="height:100px; width:100px; background:yellow; float:left; margin:3px;">
+				<button>button</button>
+			</div>
+		</div>
+	
 		<button class="hasClassAndId" id="hasClassAndId">Button with ID and Class</button>
 	</div>
-</body>
-	<script src="superselector.js" type="text/javascript"></script>
-	<script>
-		new superselector();
+	<script type="text/javascript">
+		var xhr = new XMLHttpRequest();
+		xhr.onreadystatechange = function() {
+			if (xhr.readyState === 4) {
+				if (xhr.status === 200) {
+					var link = document.getElementById('bookmarklet');
+					link.href = "javascript:"+xhr.responseText;
+					link.className = 'loaded';
+				}
+			}
+		};
+		xhr.open('get', 'superselector.js', true);
+		xhr.send(null);
 	</script>
+	<script src="superselector.js" type="text/javascript"></script>
+</body>
 </html>
