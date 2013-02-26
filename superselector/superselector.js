@@ -43,7 +43,7 @@
 		}
 		this.prevElement = target;
 		this.prevElementBorder = target.style.outline;
-		target.style.outline = "1px black dotted";
+		target.style.outline = "2px black dotted";
 	};
 
 	superselector.prototype.configOptionIsSelected = function(sConfigId)
