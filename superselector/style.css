@@ -7,7 +7,8 @@
 	border-radius:3px;
 	border:black 1px solid;
 	opacity: 1;
-  
+	font-family: Ariel;
+	font-size: 16px;
 }
 
 #superselect_tabs {
@@ -19,6 +20,7 @@
 #superselect_tabs > ul{
 	font: 0.9em;
 	list-style:none;
+	-webkit-padding-start: 0px;
 }
 
 #superselect_tabs > ul > li{
@@ -90,6 +92,7 @@
 	border: 1px black solid;
 	border-bottom-left-radius:3px;
 	border-bottom-right-radius:3px;
+	line-height: 16px;
 }
 
 .superselect_genoptions input {
