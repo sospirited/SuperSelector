@@ -19,7 +19,7 @@
 
 	superselector.prototype.handleClick = function(oEvent)
 	{
-		if(oEvent.ctrlKey) 
+		if(oEvent.ctrlKey || oEvent.metaKey) 
 		{
 			/* Update current values */
 			this.message = document.getElementById("superselect_generated").innerHTML;
