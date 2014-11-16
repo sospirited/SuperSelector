@@ -1,4 +1,5 @@
 .superselect {
+	direction: ltr;
 	height:120px;
 	width:600px;
 	z-index:99999;
