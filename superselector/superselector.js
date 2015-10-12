@@ -334,7 +334,7 @@
 	superselector.prototype.initialize = function(oSS)
 	{
 		var css = document.createElement('link');
-		css.href = "http://caplin.github.com/SuperSelector/superselector/style.css";
+		css.href = "https://sospirited.github.com/SuperSelector/superselector/style.css";
 		css.type = 'text/css';
 		css.rel  = 'stylesheet';
 		var head = document.getElementsByTagName('head')[0];
